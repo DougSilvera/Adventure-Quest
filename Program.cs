@@ -9,6 +9,9 @@ namespace Quest
     {
         static void Main(string[] args)
         {
+            bool run = true;
+            while (run)
+            {
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
             //   the text of the challenge
@@ -73,10 +76,26 @@ namespace Quest
             else if (theAdventurer.Awesomeness <= minAwesomeness)
             {
                 Console.WriteLine("Get out of my sight. Your lack of awesomeness offends me!");
+                
             }
             else
             {
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
+
+            }
+            // method to gather user input to change the runtime of program
+            Console.Write("would you like to play again? (Y/N): ");
+            string playAgainAnswer = Console.ReadLine().ToLower();
+            if (playAgainAnswer == "y")
+            {
+                run = true;
+            } else if (playAgainAnswer == "n")
+            {
+                run = false;
+            } else if (playAgainAnswer != "y" && playAgainAnswer != "n")
+            {
+                run = false;
+            }
             }
         }
     }
