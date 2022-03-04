@@ -16,10 +16,10 @@ namespace Quest
             if (ShininessLevel < 2)
             {
                 return "dull";
-            } else if (ShininessLevel > 2 && ShininessLevel < 5)
+            } else if (ShininessLevel >= 2 && ShininessLevel <= 5)
             {
                 return "noticeable";
-            } else if (ShininessLevel > 6 && ShininessLevel < 9)
+            } else if (ShininessLevel >= 6 && ShininessLevel <= 9)
             {
                 return "bright"; 
             } else 
