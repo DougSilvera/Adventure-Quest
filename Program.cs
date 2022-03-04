@@ -18,7 +18,7 @@ namespace Quest
                     Length = 70
                     };
 
-                
+               Prize newPrize = new Prize("A shiny gold dubloon!");
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
             //   the text of the challenge
@@ -27,7 +27,7 @@ namespace Quest
             Console.Write("What is your name adventurer?: ");
             string inputAdventurerName = Console.ReadLine();
             Console.Write("how shiny is your hat?(1-10): ");
-            Hat inputAdventurerHat = new Hat(5);
+            Hat inputAdventurerHat = new Hat(int.Parse(Console.ReadLine()));
             Challenge twoPlusTwo = new Challenge("2 + 2?", 4, 10);
             Challenge theAnswer = new Challenge(
                 "What's the answer to life, the universe and everything?", 42, 25);
