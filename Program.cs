@@ -26,6 +26,8 @@ namespace Quest
             //   a number of awesome points to gain or lose depending on the success of the challenge
             Console.Write("What is your name adventurer?: ");
             string inputAdventurerName = Console.ReadLine();
+            Console.Write("how shiny is your hat?(1-10): ");
+            Hat inputAdventurerHat = new Hat(5);
             Challenge twoPlusTwo = new Challenge("2 + 2?", 4, 10);
             Challenge theAnswer = new Challenge(
                 "What's the answer to life, the universe and everything?", 42, 25);
@@ -56,7 +58,7 @@ namespace Quest
 
              
             // Make a new "Adventurer" object using the "Adventurer" class
-            Adventurer theAdventurer = new Adventurer(inputAdventurerName, newRobe);
+            Adventurer theAdventurer = new Adventurer(inputAdventurerName, newRobe, inputAdventurerHat);
             Console.WriteLine(theAdventurer.GetDescription());
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
